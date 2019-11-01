@@ -121,4 +121,5 @@ def worldmap_edu():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=33507, debug=True)
+
