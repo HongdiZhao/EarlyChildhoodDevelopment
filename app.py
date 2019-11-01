@@ -17,6 +17,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 
+
+
 class ColumnSelectTransformer(base.BaseEstimator, base.TransformerMixin):
     def __init__(self, col_names):
         self.col_names = col_names  # We will need these in transform()
