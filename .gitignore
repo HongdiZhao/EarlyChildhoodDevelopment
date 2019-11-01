@@ -5,5 +5,5 @@ env
 /static
 ECD_logistics_identifyletters
 ECD_logistics_identifyletters_t
-/templates/blog.html
-/templates/contact.html
+/templates/blog
+/templates/contact
