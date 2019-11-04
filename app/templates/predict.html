@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Early Childhood Development</title>
+
+  <!-- Bootstrap -->
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/responsive-slider.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <!-- =======================================================
+    Theme Name: Resi
+    Theme URL: https://bootstrapmade.com/resi-free-bootstrap-html-template/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <div class="navbar-brand">
+                <a href="{{ url_for('index') }}"><h1>Early Childhoold Development</h1></a>
+              </div>
+            </div>
+            <div class="menu">
+              <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation"><a href="{{ url_for('index') }}">Home</a></li>
+                  <li role="presentation"><a href="{{ url_for('predict') }}">Predict</a></li>
+                  <li role="presentation"><a href="{{ url_for('model') }}">Outcome</a></li>
+                  <li role="presentation"><a href="{{ url_for('worldmap') }}">Development Map</a></li>
+                  <li role="presentation"><a href="{{ url_for('worldmap_edu') }}">Education Map</a></li>
+              </ul>
+            </div>
+          </div>\
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+<!-- Input Form -->
+<form id='Child Information' method='post'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline services-head text-center">
+            <h2>Please Input The Child Information</h2>
+          </div>
+        </br>
+        </br>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="services-contents">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4> If child ever attend early childhood education program?</h4>
+                  <br/>
+                  <p> (1, yes; 0, no)  </p>
+                  <br/>
+                  <input type = "text" name='earlyc_edu_1'>  
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4> What is the child family wealth status compare with other familys in the same area?</h4>
+                  <p>
+                      (1. Poorest;
+                      2. Second;
+                      3. Middle;
+                      4. Fourth;
+                      5. Richest.)  </p>
+                    <input type = "text" name='windex5_1'> 
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4>What is the child's mother education level: </h4>
+                  <p>
+                      <br/>
+                      (1. No education;
+                      2. Primary education;
+                      3. Primary Vocational;
+                      4. Secondary education;
+                      5. Secondary Vocational;
+                      6. Higher.) </p>
+                  <input type = "text" name='melevel_1'> 
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">  <!--Formate the width-->
+        </br>
+        </br>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="services-contents">
+          <!-- Start Left services -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4> What is the child age? </h4>
+                  <p>  <br/> (0 to 5 years) </p>
+                      <input type = "text" name='age_1'> 
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4> Does the child have home made toys to play with? </h4>
+                  <p>
+                       (1. Yes; 0. No)   </p>
+                      <input type = "text" name='has_hometoy_1'> 
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- end col-md-4 -->
+            <div class=" about-move">
+              <div class="services-details">
+                <div class="single-services">
+                  <a class="services-icon" href="#">
+                      <i class="fa fa-check-square"></i>
+                    </a>
+                  <h4>Number of books that the child has at home: </h4>
+                  <p>
+                       (0 to 10 books) </p>
+                      <input type = "text" name='num_books_1'> 
+                </div>
+              </div>
+              <!-- end about-details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+<div class="breadcrumb">
+    <h4><input type='submit' value='Please Submit Your Input' /></h4>
+  </div>
+</form>
+  
+
+
+  <!-- End Form -->
+<!--
+<form id='Child Information' method='post'>
+    <div class="container">
+      <div class="row">
+        <div class="boxs">
+          <div class="col-md-4">
+                <div class="align-center">
+                  <h4>Education Program</h4>
+                  <div class="icon">
+                    <i class="fa fa-heart-o fa-3x"></i>
+                  </div>
+                  <p> If child ever attend early childhood education program? (1, yes; 0, no)
+                      <input type = "text" name='earlyc_edu_1'> 
+                  </p>
+                </div>
+              </div>
+            </div> 
+          <div class="col-md-4">
+            <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0s">
+              <div class="align-center">
+                <h4>Family Wealth Status</h4>
+                <div class="icon">
+                  <i class="fa fa-desktop fa-3x"></i>
+                </div>
+                <p> What is the child family wealth status compare with other familys in the same area?
+                    1. Poorest;
+                    2. Second;
+                    3. Middle;
+                    4. Fourth;
+                    5. Richest.
+                      <input type = "text" name='windex5_1'> 
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0s">
+              <div class="align-center">
+                <h4>Mother Education Level</h4>
+                <div class="icon">
+                  <i class="fa fa-location-arrow fa-3x"></i>
+                </div>
+                <p> What is the child's mother education level: 
+                  1. No education
+                  2. Primary education
+                  3. Primary Vocational
+                  4. Secondary education
+                  5. Secondary Vocational
+                  6. Higher
+                        <input type = "text" name='melevel_1'> 
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="bg">
+          <div class="col-md-4">
+            <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+              <div class="align-center">
+                <h4>Child Age</h4>
+                <div class="icon">
+                  <i class="fa fa-heart-o fa-3x"></i>
+                </div>
+                <p>
+                    What is the child age? (0 to 5 years)
+                    <input type = "text" name='age_1'>  
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+              <div class="align-center">
+                <h4>Home Toys</h4>
+                <div class="icon">
+                  <i class="fa fa-laptop fa-3x"></i>
+                </div>
+                <p> What is the child age? (0 to 5 years)
+                    <input type = "text" name='age_1'>  
+                    Does the child has home made toys to play with? 1. Yes; 0. No
+                      <input type = "text" name='has_hometoy_1'> 
+                      Number of books that the child has at home? (0 to 10 books)
+                      <input type = "text" name='num_books_1'> 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+              <div class="align-center">
+                <h4>Number of Books</h4>
+                <div class="icon">
+                  <i class="fa fa-cloud fa-3x"></i>
+                </div>
+                <p> Number of books that the child has at home? (0 to 10 books)
+                        <input type = "text" name='num_books_1'> 
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  <div class="breadcrumb">
+    <h4><input type='submit' value='Please Submit Your Input' /></h4>
+  </div>
+</form>
+-->
+
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="portfolios">
+
+        <a href="{{ url_for ('static', filename='img/portfolio/1.jpg') }}" class="flipLightBox">
+					<img src="{{ url_for ('static', filename='img/portfolio/1.jpg') }}" width="225" height="225" alt="Image 1" />
+					<span><b>LightBox Group 1, Image 1</b> Text to accompany first lightbox image</span>
+					</a>
+
+        <a href="{{ url_for ('static', filename='img/portfolio/2.jpg') }}" class="flipLightBox">
+					<img src="{{ url_for ('static', filename='img/portfolio/2.jpg') }}" width="225" height="225" alt="Image 2" />
+					<span><b>LightBox Group 1, Image 2</b><br />Text to accompany 2nd lightbox image</span>
+					</a>
+
+        <a href="{{ url_for ('static', filename='img/portfolio/3.jpg') }}" class="flipLightBox">
+					<img src="{{ url_for ('static', filename='img/portfolio/3.jpg') }}" width="225" height="225" alt="Image 3" />
+					<span><b>LightBox Group 1, Three</b> Text to accompany the third lightbox image</span>
+					</a>
+
+        <a href="{{ url_for ('static', filename='img/portfolio/4.jpg') }}" class="flipLightBox">
+					<img src="{{ url_for ('static', filename='img/portfolio/4.jpg') }}" width="225" height="225" alt="Image 4" />
+					<span><b>The Group 1 Final LightBox</b> Text to accompany the last of the lighboxes</span>
+					</a>
+
+        <div class="portfolio">
+          <a href="{{ url_for ('static', filename='img/portfolio/5.jpg') }}" class="flipLightBox">
+						<img src="{{ url_for ('static', filename='img/portfolio/5.jpg') }}" width="225" height="225" alt="Image 1" />
+						<span><b>LightBox Group 1, Image 1</b> Text to accompany first lightbox image</span>
+						</a>
+
+          <a href="{{ url_for ('static', filename='img/portfolio/6.jpg') }}" class="flipLightBox">
+						<img src="{{ url_for ('static', filename='img/portfolio/6.jpg') }}" width="225" height="225" alt="Image 2" />
+						<span><b>LightBox Group 1, Image 2</b><br />Text to accompany 2nd lightbox image</span>
+						</a>
+
+          <a href="{{ url_for ('static', filename='img/portfolio/7.jpg') }}" class="flipLightBox">
+						<img src="{{ url_for ('static', filename='img/portfolio/7.jpg') }}" width="225" height="225" alt="Image 3" />
+						<span><b>LightBox Group 1, Three</b> Text to accompany the third lightbox image</span>
+						</a>
+
+          <a href="{{ url_for ('static', filename='img/portfolio/8.jpg') }}" class="flipLightBox">
+						<img src="{{ url_for ('static', filename='img/portfolio/8.jpg') }}" width="225" height="225" alt="Image 4" />
+						<span><b>The Group 1 Final LightBox</b> Text to accompany the last of the lighboxes</span>
+						</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <!--start footer-->
+  <footer>
+    <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="social-network">
+                <li><a href="https://www.facebook.com/alisa.hdzhao" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/hongdi-zhao-alisa/" data-placement="top" title="Linkedin"><i class="fa fa-linkedin fa-1x"></i></a></li>
+               <!-- 
+                 <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
+                <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest fa-1x"></i></a></li>
+                <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus fa-1x"></i></a></li>
+                -->
+              </ul>
+            </div>
+            <div class="col-lg-12">
+              <div class="copyright">
+                <p>Modified by &copy;Hongdi. All Photos Credit to UNICEF Official Website.</p>
+                <p>&copy;Resi Theme - All right reserved.</p>
+                <div class="credits">
+                  <!--
+                    All the links in the footer should remain intact. 
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Resi
+                  -->
+                  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+              </div>
+            </div>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--end footer-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/responsive-slider.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/fliplightbox.min.js') }}"></script>
+  <script type="text/javascript">
+    $('body').flipLightBox()
+  </script>
+  <script>
+    wow = new WOW({}).init();
+  </script>
+
+</body>
+
+</html>
