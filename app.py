@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, abort
 from datetime import datetime
 app = Flask(__name__)
-app.info=
+# app.info=
 
 import pandas as pd
 import numpy as np
