@@ -1,6 +1,6 @@
 FROM continuumio/miniconda3
 
-ADD ./app/requiremdoents.txt /tmp/requirements.txt
+ADD ./app/requirements.txt /tmp/requirements.txt
 ADD ./app/conda-requirements.txt /tmp/conda-requirements.txt
 
 RUN pip install -qr /tmp/requirements.txt 
