@@ -1,6 +1,6 @@
 /__pycache__
 .vscode
-/app/data/
+/app/data/Indocators.csv
 /app/static/
 /app/ECD_logistics_identifyletters
 /app/ECD_logistics_identifyletters_t
