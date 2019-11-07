@@ -2,7 +2,7 @@
 from flask import Flask, render_template, url_for, redirect, request, abort
 from datetime import datetime
 app = Flask(__name__)
-# app.info=
+app.info={}
 
 import pandas as pd
 import numpy as np
@@ -26,9 +26,6 @@ class ColumnSelectTransformer(base.BaseEstimator, base.TransformerMixin):
         return self
     def transform(self, X):
         return X[self.col_names].values
-
-
-# ECD_logistics = pickle.load(open('ECD_logistics_identifyletters','rb'))
 
 
 @app.route('/')
