@@ -5,4 +5,5 @@ app/static/
 app/ECD_logistics_identifyletters
 app/ECD_logistics_identifyletters_t
 app/templates/blog.html
+
 app/templates/contact.html
