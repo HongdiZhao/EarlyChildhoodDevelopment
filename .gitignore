@@ -5,5 +5,8 @@ app/static/
 app/ECD_logistics_identifyletters
 app/ECD_logistics_identifyletters_t
 app/templates/blog.html
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18260be63a3be1a50305907c02c6668843d91649
 app/templates/contact.html
